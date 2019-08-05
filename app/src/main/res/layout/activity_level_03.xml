@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.024" />
 
     <ImageView
-        android:id="@+id/imgVbox"
+        android:id="@+id/imgBoxxx"
         android:layout_width="235dp"
         android:layout_height="169dp"
         android:layout_marginStart="8dp"
