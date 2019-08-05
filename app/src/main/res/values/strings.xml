@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MAD</string>
+    <string name="next_lvl">Next Level</string>
+    <string name="num_3">Number_03</string>
+    <string name="num_9">Number_09</string>
+    <string name="Box">Box_icon</string>
+    <string name="num_07">Number_07</string>
+    <string name="num_05">Number_05</string>
+    <string name="num_21">Number_21</string>
+    <string name="dustbin_icon">Wrong_Answers</string>
+    <string name="btn_nxt">Going_To_Next_Level</string>
+    <string name="quest_01">Drag numbers devided by 03</string>
 </resources>
