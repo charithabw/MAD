@@ -1,5 +1,3 @@
 <resources>
     <string name="app_name">MAD</string>
-    <string name="KeyNewGame">Start Game</string>
-    <string name="KeyQuit">Quit</string>
 </resources>
