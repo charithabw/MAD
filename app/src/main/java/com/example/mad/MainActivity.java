@@ -8,22 +8,27 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button;
+    Button nextbutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //
-        button = findViewById(R.id.btnNewGame);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openLevelOne();
-            }
-        });
-    }
-    public void openLevelOne(){
+        setContentView(R.layout.activity_main);
+        nextbutton = (Button)findViewById(R.id.button);
 
-        Intent intent = new Intent(MainActivity.this, Activity.class);
-        startActivity(intent);
+
+       nextbutton.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+
+               Intent intent =new Intent(getApplicationContext(),Level_01.class);
+               startActivity(intent);
+               finish();
+
+           }
+       });
     }
+
+
+
+
 }

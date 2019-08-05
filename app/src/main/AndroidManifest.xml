@@ -13,8 +13,8 @@
 
         <activity android:name=".Level_03" />
         <activity android:name=".Level_02" />
-        <activity android:name=".splash" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
