@@ -17,6 +17,8 @@
     <string name="quest_01">Drag numbers devided by 03</string>
     <string name="quest_02">Drag numbers devided by 07</string>
     <string name="quest_03">Drag numbers devided by 03 and 07</string>
+    <string name="btnNext">Start</string>
+    <string name="btnBack">Back</string>
 
 
 </resources>
