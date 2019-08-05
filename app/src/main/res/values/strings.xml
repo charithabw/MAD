@@ -9,5 +9,7 @@
     <string name="num_21">Number_21</string>
     <string name="dustbin_icon">Wrong_Answers</string>
     <string name="btn_nxt">Going_To_Next_Level</string>
-    <string name="quest_01">Drag numbers devided by 03</string>
+    <string name="quest_01">Drag numbers devided by 07</string>
+    <string name="num_42">Number_42</string>
+    <string name="num_22">Number_22</string>
 </resources>
