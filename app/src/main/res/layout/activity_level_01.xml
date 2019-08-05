@@ -8,14 +8,14 @@
     tools:context=".Level_01">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtHedding"
         android:layout_width="322dp"
         android:layout_height="45dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="687dp"
         android:contentDescription="@string/quest_01"
-        android:text="@string/quest_01"
+        android:text="@string/quest_02"
         android:textColor="@android:color/background_light"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/Box_icon"
+        android:id="@+id/imgBox_icon"
         android:layout_width="285dp"
         android:layout_height="169dp"
         android:layout_marginStart="63dp"
@@ -34,14 +34,14 @@
         android:contentDescription="@string/Box"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.946"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/box" />
 
     <ImageView
-        android:id="@+id/Num_03"
+        android:id="@+id/imgNum_03"
         android:layout_width="80dp"
         android:layout_height="87dp"
         android:layout_marginStart="16dp"
@@ -58,7 +58,7 @@
         app:srcCompat="@drawable/n3" />
 
     <ImageView
-        android:id="@+id/Num_07"
+        android:id="@+id/imgNum_07"
         android:layout_width="80dp"
         android:layout_height="87dp"
         android:layout_marginStart="16dp"
@@ -75,7 +75,7 @@
         app:srcCompat="@drawable/n7" />
 
     <ImageView
-        android:id="@+id/Num_05"
+        android:id="@+id/imgNum_05"
         android:layout_width="80dp"
         android:layout_height="87dp"
         android:layout_marginStart="16dp"
@@ -92,24 +92,24 @@
         app:srcCompat="@drawable/n5" />
 
     <ImageView
-        android:id="@+id/Num_09"
+        android:id="@+id/imgNum_09"
         android:layout_width="80dp"
         android:layout_height="87dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="52dp"
         android:contentDescription="@string/num_9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542"
+        app:layout_constraintTop_toTopOf="@+id/txtHedding"
+        app:layout_constraintVertical_bias="0.591"
         app:srcCompat="@drawable/n9" />
 
     <ImageView
-        android:id="@+id/Num_21"
+        android:id="@+id/imgNum_21"
         android:layout_width="90dp"
         android:layout_height="96dp"
         android:layout_marginStart="16dp"
@@ -126,7 +126,7 @@
         app:srcCompat="@drawable/n21" />
 
     <ImageView
-        android:id="@+id/Dustbin_icon"
+        android:id="@+id/imgDustbin_icon"
         android:layout_width="115dp"
         android:layout_height="151dp"
         android:layout_marginStart="16dp"
@@ -143,7 +143,7 @@
         app:srcCompat="@drawable/dustbin" />
 
     <Button
-        android:id="@+id/Btn_nxt"
+        android:id="@+id/btnNext"
         android:layout_width="157dp"
         android:layout_height="68dp"
         android:layout_marginStart="16dp"
@@ -159,5 +159,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         tools:text="@string/next_lvl" />
+
+    <ImageView
+        android:id="@+id/imgTimeCnt"
+        android:layout_width="76dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/time_count"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095"
+        app:srcCompat="@drawable/countdown" />
 
 </android.support.constraint.ConstraintLayout>
