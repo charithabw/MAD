@@ -2,6 +2,7 @@
     <string name="app_name">Gaming</string>
     <string name="next_lvl">Next Level</string>
     <string name="num_3">Number_03</string>
+    <string name="num_04">Number_04</string>
     <string name="num_9">Number_09</string>
     <string name="Box">Box_icon</string>
     <string name="num_07">Number_07</string>
@@ -17,8 +18,17 @@
     <string name="quest_01">Drag numbers devided by 03</string>
     <string name="quest_02">Drag numbers devided by 07</string>
     <string name="quest_03">Drag numbers devided by 03 and 07</string>
+    <string name="quest_04">   Drag numbers devided by 03 and 07, and multifly of a 2 </string>
     <string name="btnNext">Start</string>
     <string name="btnBack">Back</string>
+    <string name="btnAbout">About</string>
+    <string name="btnHelp">Help</string>
+    <string name="txtAbout">This is the Kids Game depeloped by MADDISC G11-22</string>
+    <string name="txtHelp">1St LEVEL you should drag to the box number which devided by 03
+                            2nd LEVEL you should drag to the box number which devided by 07
+                            3rd LEVEL you should drag to the box number which devided by 03 and 07
+                            4th LEVEL you should drag to the box number which devided by 03 and 07, and multify of 02
+                            *ALL unmatching number should be drag to the BIN </string>
 
 
 </resources>

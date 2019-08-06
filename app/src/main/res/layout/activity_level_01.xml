@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/level1bg"
     tools:context=".Level_01">
 
     <TextView
@@ -15,8 +15,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="687dp"
         android:contentDescription="@string/quest_01"
-        android:text="@string/quest_02"
-        android:textColor="@android:color/background_light"
+        android:text="@string/quest_01"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,19 +25,19 @@
 
     <ImageView
         android:id="@+id/imgBox_icon"
-        android:layout_width="285dp"
-        android:layout_height="169dp"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="63dp"
-        android:layout_marginBottom="453dp"
+        android:layout_width="254dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:contentDescription="@string/Box"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toTopOf="@+id/txtHedding"
+        app:layout_constraintVertical_bias="0.156"
         app:srcCompat="@drawable/box" />
 
     <ImageView
@@ -144,8 +144,8 @@
 
     <Button
         android:id="@+id/btnNext"
-        android:layout_width="101dp"
-        android:layout_height="59dp"
+        android:layout_width="112dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -154,10 +154,9 @@
         android:text="@string/next_lvl"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.983"
         tools:text="@string/next_lvl" />
 
     <ImageView
@@ -173,7 +172,7 @@
         app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095"
+        app:layout_constraintVertical_bias="0.113"
         app:srcCompat="@drawable/countdown" />
 
     <Button
