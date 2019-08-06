@@ -15,20 +15,20 @@
     <string name="dustbin_icon">Wrong_Answers</string>
     <string name="btn_nxt">Going_To_Next_Level</string>
     <string name="time_count">Time count</string>
-    <string name="quest_01">Drag numbers devided by 03</string>
-    <string name="quest_02">Drag numbers devided by 07</string>
-    <string name="quest_03">Drag numbers devided by 03 and 07</string>
-    <string name="quest_04">   Drag numbers devided by 03 and 07, and multifly of a 2 </string>
+    <string name="quest_01">Drag numbers divided by 03</string>
+    <string name="quest_02">Drag numbers divided by 07</string>
+    <string name="quest_03">Drag numbers divided by 03 and 07</string>
+    <string name="quest_04">   Drag numbers divided by 03 and 07, and multiples of 2 </string>
     <string name="btnNext">Start</string>
     <string name="btnBack">Back</string>
     <string name="btnAbout">About</string>
     <string name="btnHelp">Help</string>
-    <string name="txtAbout">This is the Kids Game depeloped by MADDISC G11-22</string>
-    <string name="txtHelp">1St LEVEL you should drag to the box number which devided by 03
-                            2nd LEVEL you should drag to the box number which devided by 07
-                            3rd LEVEL you should drag to the box number which devided by 03 and 07
-                            4th LEVEL you should drag to the box number which devided by 03 and 07, and multify of 02
-                            *ALL unmatching number should be drag to the BIN </string>
+    <string name="txtAbout">Thi game developed by MADDISC G11-22</string>
+    <string name="txtHelp">1St LEVEL you should drag to the box number which divided by 03
+                            2nd LEVEL you should drag to the box number which divided by 07
+                            3rd LEVEL you should drag to the box number which divided by 03 and 07
+                            4th LEVEL you should drag to the box number which divided by 03 and 07, and multiples of 02
+                            *ALL incorrect number should be drag to the BIN </string>
 
 
 </resources>
