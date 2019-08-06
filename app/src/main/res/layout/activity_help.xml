@@ -22,18 +22,19 @@
         app:layout_constraintVertical_bias="0.863" />
 
     <TextView
-        android:id="@+id/txtHelp"
-        android:layout_width="181dp"
-        android:layout_height="219dp"
+        android:id="@+id/textView"
+        android:layout_width="201dp"
+        android:layout_height="215dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/txtHelp"
-        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintVertical_bias="0.466" />
+
 </android.support.constraint.ConstraintLayout>
