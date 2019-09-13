@@ -267,20 +267,20 @@ public class Level_04 extends AppCompatActivity implements SensorEventListener {
 
                     } else if (view.getId() == R.id.imgNum_09) {
                         Toast.makeText(Level_04.this, "09", Toast.LENGTH_SHORT).show();
-                        upperImageViews.setImageResource(R.drawable.redbox);
+                       // upperImageViews.setImageResource(R.drawable.redbox);
                         iScore = iScore - 2;
                     } else if (view.getId() == R.id.imgNum_21) {
                         Toast.makeText(Level_04.this, "21", Toast.LENGTH_SHORT).show();
-                        upperImageViews.setImageResource(R.drawable.redbox);
+                        //upperImageViews.setImageResource(R.drawable.redbox);
                         iScore = iScore - 2;
 
                     } else if (view.getId() == R.id.imgNum_42) {
                         Toast.makeText(Level_04.this, "42", Toast.LENGTH_SHORT).show();
-                        upperImageViews.setImageResource(R.drawable.box);
+                        //upperImageViews.setImageResource(R.drawable.box);
                         iScore = iScore + 2;
                     } else if (view.getId() == R.id.imgNum_70) {
                         Toast.makeText(Level_04.this, "70", Toast.LENGTH_SHORT).show();
-                        upperImageViews.setImageResource(R.drawable.box);
+                        //upperImageViews.setImageResource(R.drawable.box);
                         iScore = iScore + 2;
                     }
                         score.setText(String.valueOf(iScore));
