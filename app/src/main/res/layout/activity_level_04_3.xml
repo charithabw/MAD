@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/level04bg"
-    tools:context=".Level_04">
+    tools:context=".Level_04_3">
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -18,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="19dp"
         android:gravity="center"
-        android:text="5"
+        android:text="5 and 6"
         android:textColor="#fafafa"
         android:textSize="15sp"
         android:textStyle="bold" />
@@ -61,21 +62,21 @@
 
 
     <ImageView
-            android:id="@+id/imgNum_45"
-            android:layout_width="91dp"
-            android:layout_height="98dp"
-            android:src="@drawable/n45"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/imgNum_30"
+        android:layout_width="91dp"
+        android:layout_height="98dp"
+        android:src="@drawable/n30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imgNum_65"
+        android:id="@+id/imgNum_45"
         android:layout_width="71dp"
         android:layout_height="85dp"
         android:layout_marginBottom="96dp"
-        android:src="@drawable/n65"
+        android:src="@drawable/n45"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgNum_45" />
+        app:layout_constraintStart_toEndOf="@+id/imgNum_30" />
 
     <ImageView
         android:id="@+id/imgNum_60"
@@ -85,27 +86,27 @@
         android:layout_marginBottom="16dp"
         android:src="@drawable/n60"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imgNum_45" />
+        app:layout_constraintStart_toStartOf="@+id/imgNum_30" />
 
     <ImageView
-        android:id="@+id/imgNum_55"
+        android:id="@+id/imgNum_65"
         android:layout_width="78dp"
         android:layout_height="84dp"
         android:layout_marginStart="76dp"
         android:layout_marginBottom="128dp"
-        android:src="@drawable/n55"
+        android:src="@drawable/n65"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imgNum_60" />
+        app:layout_constraintStart_toStartOf="@+id/imgNum_45" />
 
     <ImageView
-        android:id="@+id/imgNum_36"
+        android:id="@+id/imgNum_90"
         android:layout_width="82dp"
         android:layout_height="80dp"
         android:layout_marginStart="116dp"
         android:layout_marginBottom="184dp"
-        android:src="@drawable/n36"
+        android:src="@drawable/n90"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imgNum_45" />
+        app:layout_constraintStart_toStartOf="@+id/imgNum_30" />
 
     <TextView
         android:id="@+id/txtScore"
@@ -137,15 +138,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="55dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginBottom="76dp"
-        android:text="Next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btnBack"
@@ -174,7 +166,6 @@
 
 
     </FrameLayout>
-
 
 
 
