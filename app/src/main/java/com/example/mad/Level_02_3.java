@@ -20,7 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Level_02 extends AppCompatActivity implements SensorEventListener {
+public class Level_02_3 extends AppCompatActivity implements SensorEventListener {
 
     DBHelper myDB;
     private SensorManager sensorManager;
@@ -46,7 +46,7 @@ public class Level_02 extends AppCompatActivity implements SensorEventListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level_02);
+        setContentView(R.layout.activity_level_02_3);
         myDB = new DBHelper(this);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         lastUpdate = System.currentTimeMillis();
@@ -62,18 +62,18 @@ public class Level_02 extends AppCompatActivity implements SensorEventListener {
 
         upperImageViews = (ImageView) findViewById(R.id.imgBox);
 
-        lowerImageView[0] = (ImageView) findViewById(R.id.imgNum_18);
-        lowerImageView[1] = (ImageView) findViewById(R.id.imgNum_12);
-        lowerImageView[2] = (ImageView) findViewById(R.id.imgNum_6);
-        lowerImageView[3] = (ImageView) findViewById(R.id.imgNum_20);
-        lowerImageView[4] = (ImageView) findViewById(R.id.imgNum_4);
+        lowerImageView[0] = (ImageView) findViewById(R.id.imgNum_12);
+        lowerImageView[1] = (ImageView) findViewById(R.id.imgNum_24);
+        lowerImageView[2] = (ImageView) findViewById(R.id.imgNum_36);
+        lowerImageView[3] = (ImageView) findViewById(R.id.imgNum_16);
+        lowerImageView[4] = (ImageView) findViewById(R.id.imgNum_18);
 
         int upperImages[][] = {
                 {R.drawable.box}
         };
 
         int lowerImages[][] = {
-                {R.drawable.n18, R.drawable.n12, R.drawable.n6, R.drawable.n20, R.drawable.n4}
+                {R.drawable.n12, R.drawable.n24, R.drawable.n36, R.drawable.n16, R.drawable.n18}
         };
 
 
@@ -85,30 +85,30 @@ public class Level_02 extends AppCompatActivity implements SensorEventListener {
             lowerImageView[i].setTag(lowerImages[gameValue - 1][i]);
 
 
-            lowerImageView[i].setOnTouchListener(new Level_02.MyTouchListener());
+            lowerImageView[i].setOnTouchListener(new Level_02_3.MyTouchListener());
 
         }
         FrameLayout fl1 = (FrameLayout) findViewById(R.id.parentLayout);
 
 
         if (fl1 != null) {
-            fl1.setOnDragListener(new Level_02.MyDragListener());
+            fl1.setOnDragListener(new Level_02_3.MyDragListener());
             //upperImageViews.setOnDragListener(new MyDragListener());
 
         }
 
         FrameLayout flBox = (FrameLayout) findViewById(R.id.boxLayout);
         if (flBox != null) {
-            flBox.setOnDragListener(new Level_02.MyDragListener2());
+            flBox.setOnDragListener(new Level_02_3.MyDragListener2());
 
         }
 
-        upperImageViews.setOnDragListener(new Level_02.MyDragListener2());
+        upperImageViews.setOnDragListener(new Level_02_3.MyDragListener2());
 
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(Level_02.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(Level_02_3.this);
                 builder.setMessage("Do you want to Submit !!!").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -131,7 +131,7 @@ public class Level_02 extends AppCompatActivity implements SensorEventListener {
             @Override
             public void onClick(View view) {
 
-                Intent intent =new Intent(getApplicationContext(),Level_02_2.class);
+                Intent intent =new Intent(getApplicationContext(),Level_03.class);
                 startActivity(intent);
                 finish();
 
@@ -141,7 +141,7 @@ public class Level_02 extends AppCompatActivity implements SensorEventListener {
             @Override
             public void onClick(View view) {
 
-                Intent intent =new Intent(getApplicationContext(),Level_01.class);
+                Intent intent =new Intent(getApplicationContext(),Level_02_2.class);
                 startActivity(intent);
                 finish();
 
@@ -217,7 +217,7 @@ public class Level_02 extends AppCompatActivity implements SensorEventListener {
                     iv = new ImageView(getApplicationContext());
                     iv.setImageResource(letrval);
                     iv.setTag(letrval);
-                    iv.setOnTouchListener(new Level_02.MyNextTouchListener());
+                    iv.setOnTouchListener(new Level_02_3.MyNextTouchListener());
                     //iv.setBackgroundColor(Color.YELLOW);
                     params2 = new  FrameLayout.LayoutParams(  mapView.getWidth(), mapView.getHeight());
                     params2.leftMargin = evX-(mapView.getWidth()/2);
@@ -266,35 +266,35 @@ public class Level_02 extends AppCompatActivity implements SensorEventListener {
                     iv = new ImageView(getApplicationContext());
                     iv.setImageResource(letrval);
                     iv.setTag(letrval);
-                    iv.setOnTouchListener(new Level_02.MyNextTouchListener());
+                    iv.setOnTouchListener(new Level_02_3.MyNextTouchListener());
                     // iv.setBackgroundColor(Color.YELLOW);
                     params2 = new  FrameLayout.LayoutParams(  mapView.getWidth(), mapView.getHeight());
                     params2.leftMargin = evX-(mapView.getWidth()/2);
                     params2.topMargin = evY-(mapView.getHeight()/2);
                     r2.addView(iv, params2);
 
-                    if (view.getId() == R.id.imgNum_18) {
-                        Toast.makeText(Level_02.this, "18", Toast.LENGTH_SHORT).show();
+                    if (view.getId() == R.id.imgNum_12) {
+                        Toast.makeText(Level_02_3.this, "12", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.box);
                         iScore = iScore + 2;
                         // Toast.makeText(Level_04.this, "Success" ,Toast.LENGTH_SHORT).show();
                         // addData();
 
-                    } else if (view.getId() == R.id.imgNum_12) {
-                        Toast.makeText(Level_02.this, "12", Toast.LENGTH_SHORT).show();
+                    } else if (view.getId() == R.id.imgNum_24) {
+                        Toast.makeText(Level_02_3.this, "24", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.box);
                         iScore = iScore + 2;
-                    } else if (view.getId() == R.id.imgNum_6) {
-                        Toast.makeText(Level_02.this, "6", Toast.LENGTH_SHORT).show();
+                    } else if (view.getId() == R.id.imgNum_36) {
+                        Toast.makeText(Level_02_3.this, "36", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.box);
                         iScore = iScore + 2;
 
-                    } else if (view.getId() == R.id.imgNum_20) {
-                        Toast.makeText(Level_02.this, "20", Toast.LENGTH_SHORT).show();
+                    } else if (view.getId() == R.id.imgNum_16) {
+                        Toast.makeText(Level_02_3.this, "16", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.redbox);
                         iScore = iScore - 2;
-                    } else if (view.getId() == R.id.imgNum_4) {
-                        Toast.makeText(Level_02.this, "4", Toast.LENGTH_SHORT).show();
+                    } else if (view.getId() == R.id.imgNum_18) {
+                        Toast.makeText(Level_02_3.this, "18", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.redbox);
                         iScore = iScore - 2;
                     }
@@ -319,7 +319,7 @@ public class Level_02 extends AppCompatActivity implements SensorEventListener {
     }
     public void addData(){
         myDB.addInfo_Score_Table("Sashini", "ajxankajn","2","1");
-        Toast.makeText(Level_02.this, "Success" ,Toast.LENGTH_SHORT).show();
+        Toast.makeText(Level_02_3.this, "Success" ,Toast.LENGTH_SHORT).show();
     }
 
 
