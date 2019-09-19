@@ -5,20 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/level03"
-    tools:context=".Level_03">
-
+    tools:context=".Level_03_2">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="19dp"
         android:background="#ec2453" />
 
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="19dp"
         android:gravity="center"
-        android:text="4"
+        android:text="5"
         android:textColor="#fafafa"
         android:textSize="15sp"
         android:textStyle="bold" />
@@ -79,22 +79,22 @@
         app:layout_constraintStart_toEndOf="@+id/imgNum_20" />
 
     <ImageView
-        android:id="@+id/imgNum_40"
+        android:id="@+id/imgNum_50"
         android:layout_width="77dp"
         android:layout_height="98dp"
         android:layout_marginStart="128dp"
         android:layout_marginBottom="172dp"
-        android:src="@drawable/n40"
+        android:src="@drawable/n50"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imgNum_20" />
 
     <ImageView
-        android:id="@+id/imgNum_50"
-        android:layout_width="78dp"
-        android:layout_height="84dp"
+        android:id="@+id/imgNum_55"
+        android:layout_width="127dp"
+        android:layout_height="108dp"
         android:layout_marginStart="144dp"
         android:layout_marginBottom="212dp"
-        android:src="@drawable/n50"
+        android:src="@drawable/n55"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imgNum_30" />
 
@@ -179,6 +179,8 @@
 
 
     </FrameLayout>
+
+
 
 
 

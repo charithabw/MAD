@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/level03"
-    tools:context=".Level_03">
 
+    tools:context=".Level_03_3">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="19dp"
         android:gravity="center"
-        android:text="4"
+        android:text="4 and 5"
         android:textColor="#fafafa"
         android:textSize="15sp"
         android:textStyle="bold" />
