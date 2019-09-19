@@ -131,7 +131,7 @@ public class Level_01_2 extends AppCompatActivity implements SensorEventListener
             @Override
             public void onClick(View view) {
 
-                Intent intent =new Intent(getApplicationContext(),Level_01_2.class);
+                Intent intent =new Intent(getApplicationContext(),Level_01_3.class);
                 startActivity(intent);
                 finish();
 
@@ -141,7 +141,7 @@ public class Level_01_2 extends AppCompatActivity implements SensorEventListener
             @Override
             public void onClick(View view) {
 
-                Intent intent =new Intent(getApplicationContext(),Level_04.class);
+                Intent intent =new Intent(getApplicationContext(),Level_01.class);
                 startActivity(intent);
                 finish();
 
