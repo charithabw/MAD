@@ -318,7 +318,7 @@ public class Level_04_2 extends AppCompatActivity implements SensorEventListener
         return iScore;
     }
     public void addData(){
-        myDB.addInfo("charithamm", "bandara", "1", "14");
+        myDB.addInfo_Score_Table("charithamm", "bandara", "1", "14");
         Toast.makeText(Level_04_2.this, "Success" ,Toast.LENGTH_SHORT).show();
     }
 
