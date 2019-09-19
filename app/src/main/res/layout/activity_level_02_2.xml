@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/level02bg"
-    tools:context=".Level_02">
+    tools:context=".Level_02_2">
 
     <ImageView
         android:id="@+id/imageView"
@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="19dp"
         android:gravity="center"
-        android:text="3"
+        android:text="4"
         android:textColor="#fafafa"
         android:textSize="15sp"
         android:textStyle="bold" />
@@ -61,52 +61,52 @@
 
 
     <ImageView
-        android:id="@+id/imgNum_18"
+        android:id="@+id/imgNum_16"
         android:layout_width="91dp"
         android:layout_height="98dp"
-        android:src="@drawable/n18"
+        android:src="@drawable/n16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imgNum_12"
+        android:id="@+id/imgNum_24"
         android:layout_width="71dp"
         android:layout_height="85dp"
         android:layout_marginStart="52dp"
         android:layout_marginBottom="164dp"
-        android:src="@drawable/n12"
+        android:src="@drawable/n24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgNum_18" />
+        app:layout_constraintStart_toEndOf="@+id/imgNum_16" />
 
     <ImageView
-        android:id="@+id/imgNum_6"
+        android:id="@+id/imgNum_36"
         android:layout_width="77dp"
         android:layout_height="98dp"
         android:layout_marginStart="164dp"
         android:layout_marginBottom="16dp"
-        android:src="@drawable/n6"
+        android:src="@drawable/n36"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imgNum_18" />
+        app:layout_constraintStart_toStartOf="@+id/imgNum_16" />
 
     <ImageView
-        android:id="@+id/imgNum_20"
+        android:id="@+id/imgNum_9"
         android:layout_width="78dp"
         android:layout_height="84dp"
         android:layout_marginStart="76dp"
         android:layout_marginBottom="128dp"
-        android:src="@drawable/n20"
+        android:src="@drawable/n9"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imgNum_6" />
+        app:layout_constraintStart_toStartOf="@+id/imgNum_36" />
 
     <ImageView
-        android:id="@+id/imgNum_4"
+        android:id="@+id/imgNum_15"
         android:layout_width="82dp"
         android:layout_height="80dp"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="172dp"
-        android:src="@drawable/n4"
+        android:src="@drawable/n15"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imgNum_30" />
+        app:layout_constraintStart_toStartOf="@+id/imgNum_16" />
 
     <TextView
         android:id="@+id/txtScore"
