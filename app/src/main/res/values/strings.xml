@@ -23,6 +23,12 @@
     <string name="btnBack">Back</string>
     <string name="btnAbout">About</string>
     <string name="btnHelp">Help</string>
+    <string name="btnClearData">Clear Data</string>
+    <string name="btnHighScore">High Score</string>
+    <string name="btnLevel01">LEVEL 1</string>
+    <string name="btnLevel02">LEVEL 2</string>
+    <string name="btnLevel03">LEVEL 3</string>
+    <string name="btnLevel04">LEVEL 4</string>
     <string name="txtAbout">Thi game developed by MADDISC G11-22</string>
     <string name="txtHelp">1St LEVEL you should drag to the box number which divided by 03
                             2nd LEVEL you should drag to the box number which divided by 07

@@ -109,6 +109,18 @@
         app:layout_constraintStart_toStartOf="@+id/imgNum_30" />
 
     <TextView
+        android:id="@+id/txtTimer"
+        android:layout_width="52dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/boxLayout"
+        app:layout_constraintHorizontal_bias="0.718"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/txtScore"
         android:layout_width="28dp"
         android:layout_height="18dp"

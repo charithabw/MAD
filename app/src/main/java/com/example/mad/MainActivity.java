@@ -1,38 +1,40 @@
 package com.example.mad;
 
-import android.app.Activity;
-import android.content.ClipData;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.DragEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
-    Button nextbutton, aboutbutton, helpbutton;
+DBHelper myDB;
+    Button startbutton, aboutbutton, helpbutton, highScoreButton, clearDataButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        nextbutton = (Button) findViewById(R.id.button);
+        startbutton = (Button) findViewById(R.id.button);
         aboutbutton = (Button) findViewById(R.id.btnAbout);
         helpbutton = (Button) findViewById(R.id.btnHelp);
+        highScoreButton = (Button)findViewById(R.id.btnHighScore);
+        clearDataButton = (Button)findViewById(R.id.btnClearData);
+
+        myDB = new DBHelper(this);
 
 
-        nextbutton.setOnClickListener(new View.OnClickListener() {
+        startbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(), Level_01.class);
+                Intent intent = new Intent(getApplicationContext(), LevelUI.class);
                 startActivity(intent);
                 finish();
-                Toast.makeText(MainActivity.this, "Start the GAME", Toast.LENGTH_SHORT).show();
+
 
             }
         });
@@ -59,6 +61,100 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        highScoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getAllInfo();
+            }
+        });
 
+        clearDataButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setMessage("Are your sure Delete !!!").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //finish();
+                             boolean data = myDB.deleteInfo();
+                             if (data == true){
+                                 Toast.makeText(MainActivity.this,"Deleted",Toast.LENGTH_SHORT).show();
+                             }
+                             else{
+                                 Toast.makeText(MainActivity.this,"Not Deleted",Toast.LENGTH_SHORT).show();
+                             }
+                        //finish();
+                    }
+                })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+
+                            }
+                        });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.setTitle("Alert!!!");
+                alertDialog.show();
+            }
+
+
+    });}
+    public void getAllInfo() {
+
+
+
+        try {
+
+            Cursor cursor1 = myDB.getAllScore();
+
+            if (cursor1.getCount() == 0) {
+                Toast.makeText(MainActivity.this, "Data Not Found", Toast.LENGTH_SHORT).show();
+                showMassages("Error", "Data not Found!!!");
+                return;
+            } else {
+
+
+                Toast.makeText(MainActivity.this, "Data Found", Toast.LENGTH_SHORT).show();
+
+                StringBuffer buffer = new StringBuffer();
+
+
+
+                    while (cursor1.moveToNext()) {
+
+
+                        buffer.append(" " + cursor1.getString(3) + "\n");
+
+                    }
+
+                            cursor1.close();
+                            showMassages("SCORE: ", buffer.toString());
+                        }
+
+
+
+        } catch(Exception e)
+
+        {
+//            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//            builder.setCancelable(true);
+//            builder.setTitle("Error");
+//            builder.setMessage("" + e);
+//            builder.show();
+        }
     }
+
+
+
+    public void showMassages(String title, String message) {
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
+    }
+
 }
