@@ -124,15 +124,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.91"
         app:layout_constraintStart_toEndOf="@+id/boxLayout" />
+
     <TextView
         android:id="@+id/txtScr"
         android:layout_width="37dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="16dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="72dp"
         android:text="Score"
         app:layout_constraintStart_toEndOf="@+id/boxLayout"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTimer"
+        android:layout_width="52dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/boxLayout"
+        app:layout_constraintHorizontal_bias="0.718"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/btnOk"
@@ -168,11 +182,10 @@
 
     <FrameLayout
         android:id="@+id/parentLayout"
-        android:layout_width="393dp"
-        android:layout_height="443dp"
+        android:layout_width="391dp"
+        android:layout_height="397dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="1.0">
