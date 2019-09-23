@@ -3,10 +3,13 @@ package com.example.mad;
 import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.CountDownTimer;
+import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,12 +38,19 @@ public class Level_01_3 extends AppCompatActivity implements SensorEventListener
     Button btnOk, nextBtn, prvBtn;
     FrameLayout r2;
     ImageView iv;
-    TextView score;
+    TextView score,timer;
     FrameLayout.LayoutParams params2;
+
+    CountDownTimer countDownTimer;
+    long timeLeftInMilliSeconds = 15000;
+    boolean timeRunning;
 
     ImageView upperImageViews;
     ImageView lowerImageView[] = new ImageView[5];
-    private static int iScore = 10;
+    private static int iScore ;
+    private static String iLevel = "1_3";
+
+
 
 
     @Override
@@ -59,6 +69,7 @@ public class Level_01_3 extends AppCompatActivity implements SensorEventListener
         btnOk = (Button) findViewById(R.id.btnOk);
         nextBtn=(Button)findViewById(R.id.btnNext);
         prvBtn=(Button)findViewById(R.id.btnBack);
+        timer = (TextView) findViewById(R.id.txtTimer);
 
         upperImageViews = (ImageView) findViewById(R.id.imgBox);
 
@@ -68,6 +79,11 @@ public class Level_01_3 extends AppCompatActivity implements SensorEventListener
         lowerImageView[3] = (ImageView) findViewById(R.id.imgNum_8);
         lowerImageView[4] = (ImageView) findViewById(R.id.imgNum_15);
 
+        startTime();
+        final Intent intent = getIntent();
+        int iScore2 = intent.getIntExtra("Score",0);
+        score.setText(String.valueOf(iScore2));
+        iScore = iScore2;
         int upperImages[][] = {
                 {R.drawable.box}
         };
@@ -114,6 +130,22 @@ public class Level_01_3 extends AppCompatActivity implements SensorEventListener
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //finish();
                         addData();
+                        getAllInfo();
+                        stopTimer();
+
+                        final Handler handler = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                //Do something after 100ms
+                                Intent intent =new Intent(getApplicationContext(),MainActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        }, 5000);
+//                        Intent intent =new Intent(getApplicationContext(),MainActivity.class);
+//                        startActivity(intent);
+//                        finish();
                     }
                 })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -127,28 +159,114 @@ public class Level_01_3 extends AppCompatActivity implements SensorEventListener
                 alertDialog.show();
             }
         });
-        nextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent =new Intent(getApplicationContext(),Level_02.class);
-                startActivity(intent);
-                finish();
-
-            }
-        });
-        prvBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent =new Intent(getApplicationContext(),Level_01_2.class);
-                startActivity(intent);
-                finish();
-
-            }
-        });
+//        nextBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                Intent intent =new Intent(getApplicationContext(),Level_02.class);
+//                startActivity(intent);
+//                finish();
+//
+//            }
+//        });
+//        prvBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                Intent intent =new Intent(getApplicationContext(),Level_01_2.class);
+//                startActivity(intent);
+//                finish();
+//
+//            }
+//        });
 
     }
+    public void startTime() {
+        if (timeRunning) {
+            stopTimer();
+
+
+
+        } else
+            startTimer();
+
+    }
+
+    public void startTimer() {
+        countDownTimer = new CountDownTimer(timeLeftInMilliSeconds, 1000) {
+            @Override
+            public void onTick(long l) {
+                timeLeftInMilliSeconds = l;
+                updateTimes();
+            }
+
+            @Override
+            public void onFinish() {
+                Toast.makeText(Level_01_3.this, "Times gone", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(Level_01_3.this);
+                builder.setMessage("Do you want to Submit !!!").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        addData();
+                        //finish();
+                    }
+
+                })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(getApplicationContext(), Level_01_3.class);
+                                startActivity(intent);
+                                dialogInterface.cancel();
+                                //finish();
+
+                            }
+                        });
+                AlertDialog alertDialog = builder.create();
+
+                alertDialog.setTitle("Your Score " + iScore);
+                alertDialog.show();
+            }
+        }.start();
+        timeRunning = true;
+    }
+
+    public void stopTimer() {
+        countDownTimer.cancel();
+        timeRunning = false;
+    }
+
+    public void updateTimes() {
+        final Handler handler = new Handler();
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                int minutes = (int) timeLeftInMilliSeconds / 60000;
+                int seconds = (int) timeLeftInMilliSeconds % 60000 / 1000;
+                String timeLeftText;
+
+                timeLeftText = "" + minutes;
+                timeLeftText += ":";
+                if (seconds < 10) timeLeftText += "0";
+                timeLeftText += seconds;
+
+                timer.setText(timeLeftText);
+            }
+        });
+//        int minutes = (int) timeLeftInMilliSeconds / 60000;
+//        int seconds = (int) timeLeftInMilliSeconds % 60000 / 1000;
+//        String timeLeftText;
+//
+//        timeLeftText = "" + minutes;
+//        timeLeftText += ":";
+//        if (seconds < 10) timeLeftText += "0";
+//        timeLeftText += seconds;
+//
+//        timer.setText(timeLeftText);
+
+    }
+
 
 
     private final class MyTouchListener implements View.OnTouchListener {
@@ -318,9 +436,63 @@ public class Level_01_3 extends AppCompatActivity implements SensorEventListener
         return iScore;
     }
     public void addData(){
-        //myDB.addInfo("charithamm", "bandara", "1", "14");
-        Toast.makeText(Level_01_3.this, "Success" ,Toast.LENGTH_SHORT).show();
+        String score = Integer.toString(iScore);
+
+        boolean data = myDB.addInfo_Score_Table("gv", "hgvh",iLevel,score);
+        if (data = true) {
+            Toast.makeText(Level_01_3.this, "Success", Toast.LENGTH_SHORT).show();
+
+        } else {
+            Toast.makeText(Level_01_3.this, "Invalid", Toast.LENGTH_SHORT).show();
+        }
     }
+    public void getAllInfo() {
+        try {
+            // Toast.makeText(Level_04.this, "Data Not Found", Toast.LENGTH_SHORT).show();
+            Cursor cursor = myDB.getInfo_Score_Table();
+            Cursor cursor1 = myDB.getHieghestSocre();
+
+            if (cursor.getCount() == 0) {
+                Toast.makeText(Level_01_3.this, "Data Not Found", Toast.LENGTH_SHORT).show();
+                showMassages("Error", "Data not Found!!!");
+                return;
+            } else {
+                Toast.makeText(Level_01_3.this, "Data Found", Toast.LENGTH_SHORT).show();
+
+                StringBuffer buffer = new StringBuffer();
+                StringBuffer buffer1 = new StringBuffer();
+
+                while (cursor.moveToNext()) {
+                    // buffer.append("Level: "+cursor.getString(3));
+                    buffer.append("Score: "+ cursor.getString(4)+"\n");
+                    //cursor.close();
+
+                }
+                cursor.close();
+                while (cursor1.moveToNext()){
+                    buffer1.append("Highest Sore: " + cursor1.getString(4));
+                }
+                cursor1.close();
+                showMassages(""+buffer1.toString(),buffer.toString());
+            }
+
+        } catch(Exception e){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setCancelable(true);
+            builder.setTitle("Error");
+            builder.setMessage("" + e);
+            builder.show();
+        }
+    }
+
+    public void showMassages(String title,String message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
+    }
+
 
 
 
