@@ -35,7 +35,7 @@ public class Level_04_3 extends AppCompatActivity implements SensorEventListener
     // MediaPlayer player;
 
     private int gameValue = 1;
-    Button btnOk,prvBtn ;
+    Button btnOk ;
     FrameLayout r2;
     ImageView iv;
     TextView score,timer;
@@ -68,7 +68,7 @@ public class Level_04_3 extends AppCompatActivity implements SensorEventListener
         score.setText(String.valueOf(iScore));
         timer = (TextView) findViewById(R.id.txtTimer);
         btnOk = (Button) findViewById(R.id.btnOk);
-        prvBtn=(Button)findViewById(R.id.btnBack);
+
 
         upperImageViews = (ImageView) findViewById(R.id.imgBox);
 
@@ -138,12 +138,12 @@ public class Level_04_3 extends AppCompatActivity implements SensorEventListener
                         handler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                //Do something after 100ms
+
                                 Intent intent =new Intent(getApplicationContext(),MainActivity.class);
                                 startActivity(intent);
                                 finish();
                             }
-                        }, 5000);
+                        }, 2000);
 //                        Intent intent =new Intent(getApplicationContext(),MainActivity.class);
 //                        startActivity(intent);
 //                        finish();
@@ -160,16 +160,7 @@ public class Level_04_3 extends AppCompatActivity implements SensorEventListener
                 alertDialog.show();
             }
         });
-        prvBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                Intent intent =new Intent(getApplicationContext(),Level_04_2.class);
-                startActivity(intent);
-                finish();
-
-            }
-        });
 
     }
     public void startTime() {

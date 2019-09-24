@@ -147,14 +147,14 @@ public class Level_04 extends AppCompatActivity implements SensorEventListener {
                                 handler.postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
-                                        //Do something after 100ms
+
                                         Intent intent = new Intent(getApplicationContext(), Level_04_2.class);
                                         intent.putExtra("Score", getiScore());
                                         startActivityForResult(intent, 1);
                                         finish();
                                         iScore = 10;
                                     }
-                                }, 5000);
+                                }, 2000);
 
 //                                Intent intent = new Intent(getApplicationContext(), Level_04_2.class);
 //                                intent.putExtra("Score", getiScore());
