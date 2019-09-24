@@ -23,7 +23,7 @@
         android:layout_height="19dp"
         android:layout_marginBottom="68dp"
         android:gravity="center"
-        android:text="Divide by both 5 and 6"
+        android:text="Divide by both 4 and 5"
         android:textColor="#fafafa"
         android:textSize="15sp"
         android:textStyle="bold"
