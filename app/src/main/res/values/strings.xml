@@ -30,11 +30,20 @@
     <string name="btnLevel03">LEVEL 3</string>
     <string name="btnLevel04">LEVEL 4</string>
     <string name="txtAbout">Thi game developed by MADDISC G11-22</string>
-    <string name="txtHelp">1St LEVEL you should drag to the box number which divided by 03
-                            2nd LEVEL you should drag to the box number which divided by 07
-                            3rd LEVEL you should drag to the box number which divided by 03 and 07
-                            4th LEVEL you should drag to the box number which divided by 03 and 07, and multiples of 02
-                            *ALL incorrect number should be drag to the BIN </string>
+    <string name="txtHelp"> 1.1th LEVEL you should drag to the box number which divided by 02
+                            1.2th LEVEL you should drag to the box number which divided by 03
+                            1.3th LEVEL you should drag to the box number which divided by both
+                            2.1th LEVEL you should drag to the box number which divided by 03
+                            2.2th LEVEL you should drag to the box number which divided by 04
+                            2.3th LEVEL you should drag to the box number which divided by both
+                            3.1th LEVEL you should drag to the box number which divided by 04
+                            3.2th LEVEL you should drag to the box number which divided by 05
+                            3.3th LEVEL you should drag to the box number which divided by both
+                            4.1th LEVEL you should drag to the box number which divided by 05
+                            4.2th LEVEL you should drag to the box number which divided by 06
+                            4.3th LEVEL you should drag to the box number which divided by both
+
+                         </string>
 
 
 </resources>

@@ -11,14 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LevelUI">
+        <activity android:name=".LevelUI"
+            android:screenOrientation="portrait">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
 
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name=".Level_01_3">
+        <activity android:name=".Level_01_3"
+            android:screenOrientation="portrait">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -35,7 +37,8 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".Level_01_2">
+        <activity android:name=".Level_01_2"
+            android:screenOrientation="portrait">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -53,12 +56,18 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".Level_03_3" />
-        <activity android:name=".Level_02_3" />
-        <activity android:name=".Level_02_2" />
-        <activity android:name=".Level_04_3" />
-        <activity android:name=".Level_04_2" />
-        <activity android:name=".Level_03_2">
+        <activity android:name=".Level_03_3"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Level_02_3"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Level_02_2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Level_04_3"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Level_04_2"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Level_03_2"
+            android:screenOrientation="portrait">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -76,9 +85,12 @@
         <!-- <activity android:name=".Level_04_2" /> -->
         <!-- <activity android:name=".Level_04_3" /> -->
         <!-- <activity android:name=".Level_04_2" />&ndash;&gt; -->
-        <activity android:name=".Help" />
-        <activity android:name=".About" />
-        <activity android:name=".Level_04">
+        <activity android:name=".Help"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".About"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Level_04"
+            android:screenOrientation="portrait">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -87,14 +99,19 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".Level_01" />
-        <activity android:name=".Level_03" />
-        <activity android:name=".Level_02" />
-        <activity android:name=".MainActivity" /> <!-- <intent-filter> -->
+        <activity android:name=".Level_01"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Level_03"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Level_02"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/> <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
         <!-- </intent-filter> -->
-        <activity android:name=".splash">
+        <activity android:name=".splash"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
