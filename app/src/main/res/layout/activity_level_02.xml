@@ -11,17 +11,23 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="19dp"
-        android:background="#ec2453" />
+        android:layout_marginBottom="68dp"
+        android:background="#ec2453"
+        app:layout_constraintBottom_toTopOf="@+id/txtTimer"
+        tools:layout_editor_absoluteX="-16dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="19dp"
+        android:layout_marginBottom="68dp"
         android:gravity="center"
-        android:text="3"
+        android:text="devide by 3"
         android:textColor="#fafafa"
         android:textSize="15sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtTimer"
+        tools:layout_editor_absoluteX="0dp" />
 
 
     <FrameLayout
@@ -147,28 +153,10 @@
         android:layout_marginBottom="24dp"
         android:text="OK"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ok_button"/>
 
     <!--lower images end-->
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="55dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginBottom="76dp"
-        android:text="Next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="55dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="168dp"
-        android:layout_marginBottom="12dp"
-        android:text="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <FrameLayout

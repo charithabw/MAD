@@ -8,6 +8,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
@@ -32,7 +33,7 @@ public class Level_02_2 extends AppCompatActivity implements SensorEventListener
     private long lastUpdate;
 
 
-    // MediaPlayer player;
+     MediaPlayer player;
 
     private int gameValue = 1;
     Button btnOk, nextBtn, prvBtn;
@@ -67,8 +68,7 @@ public class Level_02_2 extends AppCompatActivity implements SensorEventListener
         score = (TextView) findViewById(R.id.txtScore);
         score.setText(String.valueOf(iScore));
         btnOk = (Button) findViewById(R.id.btnOk);
-        nextBtn = (Button) findViewById(R.id.btnNext);
-        prvBtn = (Button) findViewById(R.id.btnBack);
+
         timer= (TextView) findViewById(R.id.txtTimer);
 
         upperImageViews = (ImageView) findViewById(R.id.imgBox);
@@ -124,6 +124,7 @@ public class Level_02_2 extends AppCompatActivity implements SensorEventListener
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                play(view);
                 AlertDialog.Builder builder = new AlertDialog.Builder(Level_02_2.this);
                 builder.setMessage("Do you want to Submit !!!").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
@@ -132,7 +133,7 @@ public class Level_02_2 extends AppCompatActivity implements SensorEventListener
                         updateData();
                         getAllInfo();
                         stopTimer();
-
+                        stopPlayer();
                         final Handler handler = new Handler();
                         handler.postDelayed(new Runnable() {
                             @Override
@@ -551,6 +552,34 @@ public class Level_02_2 extends AppCompatActivity implements SensorEventListener
 
     }
 
+    public void play(View view){
+        if (player == null) {
+            player = MediaPlayer.create(this, R.raw.click_sound);
+            player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    stopPlayer();
+                }
+            });
+        }
+        player.start();
+    }
+    public void stop(View view){
+        stopPlayer();
+    }
+    private void stopPlayer(){
+        if (player != null){
+            player.release();
+            player = null;
+            //Toast.makeText(this, "Sound stop",Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopPlayer();
+    }
 
 }
 
