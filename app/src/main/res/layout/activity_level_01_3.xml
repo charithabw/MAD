@@ -22,7 +22,7 @@
         android:layout_height="19dp"
         android:layout_marginBottom="68dp"
         android:gravity="center"
-        android:text="2 and 3 both"
+        android:text="Drag and drop numbers divided by 2 and 3 both"
         android:textColor="#fafafa"
         android:textSize="15sp"
         android:textStyle="bold"
