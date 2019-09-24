@@ -425,6 +425,7 @@ public class Level_04 extends AppCompatActivity implements SensorEventListener {
 
                                 Toast.makeText(Level_04.this, "36", Toast.LENGTH_SHORT).show();
                                 upperImageViews.setImageResource(R.drawable.redbox);
+
                                 iScore = iScore - 2;
 
                       // Toast.makeText(Level_04.this, "Success" ,Toast.LENGTH_SHORT).show();
@@ -434,11 +435,15 @@ public class Level_04 extends AppCompatActivity implements SensorEventListener {
 
                         Toast.makeText(Level_04.this, "45", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.box);
+
+
                         iScore = iScore + 2;
                     } else if (view.getId() == R.id.imgNum_55) {
 
                         Toast.makeText(Level_04.this, "55", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.box);
+
+
                         iScore = iScore + 2;
 
 
@@ -446,13 +451,17 @@ public class Level_04 extends AppCompatActivity implements SensorEventListener {
 
                         Toast.makeText(Level_04.this, "60", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.box);
+
                         iScore = iScore + 2;
+
 
                     } else if (view.getId() == R.id.imgNum_65) {
 
                         Toast.makeText(Level_04.this, "65", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.box);
+
                         iScore = iScore + 2;
+
 
                     }
                         score.setText(String.valueOf(iScore));
@@ -612,7 +621,7 @@ public class Level_04 extends AppCompatActivity implements SensorEventListener {
         if (player != null){
             player.release();
             player = null;
-            Toast.makeText(this, "Sound stop",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Sound stop",Toast.LENGTH_SHORT).show();
         }
     }
 

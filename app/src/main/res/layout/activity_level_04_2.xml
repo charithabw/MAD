@@ -124,7 +124,8 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/txtScr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.91"
-        app:layout_constraintStart_toEndOf="@+id/boxLayout" />
+        app:layout_constraintStart_toEndOf="@+id/boxLayout"
+        android:textColor="@color/colorPrimaryDark"/>
     <TextView
         android:id="@+id/txtScr"
         android:layout_width="37dp"
@@ -134,17 +135,19 @@
         android:text="Score"
         app:layout_constraintStart_toEndOf="@+id/boxLayout"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/txtTimer"
-        android:layout_width="52dp"
-        android:layout_height="21dp"
+        android:layout_width="66dp"
+        android:layout_height="31dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="88dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toStartOf="@+id/boxLayout"
         app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/colorAccent"/>
 
     <Button
         android:id="@+id/btnOk"
