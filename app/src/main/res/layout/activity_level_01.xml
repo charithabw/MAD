@@ -22,7 +22,7 @@
         android:layout_height="19dp"
         android:layout_marginBottom="44dp"
         android:gravity="center"
-        android:text="2"
+        android:text="Drag and drop numbers divided by 02"
         android:textColor="#fafafa"
         android:textSize="15sp"
         android:textStyle="bold"
