@@ -395,6 +395,7 @@ public class Level_04_2 extends AppCompatActivity implements SensorEventListener
                     if (view.getId() == R.id.imgNum_30) {
                         Toast.makeText(Level_04_2.this, "30", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.box);
+
                         iScore = iScore + 2;
                         // Toast.makeText(Level_04.this, "Success" ,Toast.LENGTH_SHORT).show();
                         // addData();
@@ -402,19 +403,23 @@ public class Level_04_2 extends AppCompatActivity implements SensorEventListener
                     } else if (view.getId() == R.id.imgNum_36) {
                         Toast.makeText(Level_04_2.this, "36", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.box);
+
                         iScore = iScore + 2;
                     } else if (view.getId() == R.id.imgNum_60) {
                         Toast.makeText(Level_04_2.this, "60", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.box);
+
                         iScore = iScore + 2;
 
                     } else if (view.getId() == R.id.imgNum_65) {
                         Toast.makeText(Level_04_2.this, "65", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.redbox);
+
                         iScore = iScore - 2;
                     } else if (view.getId() == R.id.imgNum_72) {
                         Toast.makeText(Level_04_2.this, "72", Toast.LENGTH_SHORT).show();
                         upperImageViews.setImageResource(R.drawable.box);
+
                         iScore = iScore + 2;
                     }
                     score.setText(String.valueOf(iScore));
@@ -578,7 +583,7 @@ public class Level_04_2 extends AppCompatActivity implements SensorEventListener
         if (player != null){
             player.release();
             player = null;
-            Toast.makeText(this, "Sound stop",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Sound stop",Toast.LENGTH_SHORT).show();
         }
     }
 

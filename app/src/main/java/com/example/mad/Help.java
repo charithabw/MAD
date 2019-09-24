@@ -46,7 +46,7 @@ public class Help extends AppCompatActivity {
         if (player != null){
             player.release();
             player = null;
-            Toast.makeText(this, "Sound stop",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Sound stop",Toast.LENGTH_SHORT).show();
         }
     }
 
