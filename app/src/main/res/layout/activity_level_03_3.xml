@@ -7,21 +7,28 @@
     android:background="@drawable/level03"
 
     tools:context=".Level_03_3">
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="19dp"
-        android:background="#ec2453" />
+        android:layout_marginBottom="68dp"
+        android:background="#ec2453"
+        app:layout_constraintBottom_toTopOf="@+id/txtTimer"
+        tools:layout_editor_absoluteX="-9dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="19dp"
+        android:layout_marginBottom="68dp"
         android:gravity="center"
-        android:text="4 and 5"
+        android:text="Divide by both 4 and 5"
         android:textColor="#fafafa"
         android:textSize="15sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtTimer"
+        tools:layout_editor_absoluteX="-9dp" />
 
 
     <FrameLayout
@@ -123,7 +130,8 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/txtScr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.91"
-        app:layout_constraintStart_toEndOf="@+id/boxLayout" />
+        app:layout_constraintStart_toEndOf="@+id/boxLayout"
+        android:textColor="@color/colorPrimaryDark"/>
     <TextView
         android:id="@+id/txtScr"
         android:layout_width="37dp"
@@ -145,7 +153,8 @@
         app:layout_constraintEnd_toStartOf="@+id/boxLayout"
         app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/colorAccent"/>
 
     <Button
         android:id="@+id/btnOk"
@@ -155,34 +164,16 @@
         android:layout_marginBottom="24dp"
         android:text="OK"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ok_button"/>
 
     <!--lower images end-->
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="61dp"
-        android:layout_height="51dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="96dp"
-        android:text="Next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="70dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="168dp"
-        android:layout_marginBottom="12dp"
-        android:text="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <FrameLayout
         android:id="@+id/parentLayout"
-        android:layout_width="393dp"
-        android:layout_height="443dp"
+        android:layout_width="391dp"
+        android:layout_height="391dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
