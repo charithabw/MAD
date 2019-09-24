@@ -68,7 +68,7 @@ public class Level_01_3 extends AppCompatActivity implements SensorEventListener
         score = (TextView) findViewById(R.id.txtScore);
         score.setText(String.valueOf(iScore));
         btnOk = (Button) findViewById(R.id.btnOk);
-       
+
         timer = (TextView) findViewById(R.id.txtTimer);
 
         upperImageViews = (ImageView) findViewById(R.id.imgBox);
